@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+		<meta name="description" value="Test">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="css/test.css">
+	</head>
+	<body>
+	    <header id="myHeader">
+	        <div>
+    			<button class="fa fa-bars menu-btn" id="menuBtn"></button>
+    			<h1>FxDon</h1>
+    			<button class="fa fa-user-o client-btn" id="clientBtn">U</button>
+    		</div>
+    		<nav id="clientSec">
+			    <a href="login.html">Sign In</a>
+			    <a href="signup.html">Sign Up</a>
+			</nav>
+			<nav class="main-nav" id="mainMenu">
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li class="services-tab-container">
+					    <span class="tab-btn">Services<span class="fa fa-angle-down btn-icon-right-end"></span></span>
+					    <div class="services-tab-hide" id="services">
+					        <a href="webdev.html">Order a Website</a>
+					        <a href="forex.html">Invest in FOREX</a>
+					        <a href="mql5.html">Build a FOREX Bot</a>
+					        <a href="debug.html">Debug your Code</a>
+					    </div>
+					</li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="cv.html">CV</a></li>
+				</ul>
+			</nav>
+	    </header>
+	    <main>
+	        <!--<input type="text" id="effTest">-->
+            <section class="welcome">
+            	<div>
+            		<h2>Welcome to the Future</h2>
+            		<h4>Where all your Dreams Becomes Reality</h4>
+            		<a href="webdev.html">Order Your Own Website<span class="fa fa-arrow-right drop-down-indecator btn-icon-right-end"></span></a>
+            		<a href="forex.html">Invest in FOREX with us<span class="fa fa-arrow-right drop-down-indecator btn-icon-right-end"></span></a>
+            	</div>
+            </section>
+	        <section class="cards">
+	        	<h2 class="title"><span>Services</span></h2>
+    	        <div>
+    	        	<article>
+    	        		<img src="media/images/forex.jpg" alt="Invest in FOREX">
+    	        		<h3>FOREX Investment</h3>
+    	        		<p>Are you interested in FOREX but don't want to trade yourself? We are here for you.</p>
+    	        	    <a href="forex.html">Click here</a>
+    	        	</article>
+    	        	<article>
+    	        		<img src="media/images/web1.jpg" alt="Get your own website">
+    	        		<h3>Website Development</h3>
+    	        		<p>Are you tired of paying to post on other people's sites? Are you tired of having your posts taken down? Or are you looking to have your own Web Store? you are in luck, Order your own website now to regain your freedom</p>
+    	        		<a href="webdev.html">Click here</a>
+    	        	</article>
+    	        	<article>
+    	        		<img src="media/images/debug.jpg" alt="Let us help you debug your programs">
+    	        		<h3>Debog Your Program</h3>
+    	        		<p>Is ther a block of code or a page that is giving you sleepless night? you dont have to take on all that burden yourself. Why dont you bring it over lets help you out.</p>
+    	        		<a href="debug.html">Click here</a>
+    	        	</article>
+	        	</div>
+	        </section>
+	    </main>
+	    <footer>
+	        <nav class="footer-menu">
+	    		<a href="index.html"><h2>FxDon</h2></a>
+	    		<a href="index.html"><span class="fa fa-home btn-icon"></span>Home</a>
+	    		<div class="footer-services-tab-container">
+	    		    <span class="tab-btn"><span class="fa fa-cogs btn-icon"></span>Services<span class="fa fa-angle-down drop-down-indecator btn-icon-right-end"></span></span>
+	    		    <div class="footer-services-tab-hide">
+					    <a href="webdev.html"><span class="fa fa-code btn-icon"></span>Order a Website</a>
+					    <a href="forex.html"><span class="fa fa-home btn-icon"></span>Invest in FOREX</a>
+					    <a href="mql5.html"><span class="fa fa-robot btn-icon"></span>Build a FOREX Bot</a>
+					    <a href="debug.html"><span class="fa fa-bug btn-icon"></span>Debug your Code</a>
+	    		    </div>
+	    		</div>
+	    		<a href="blog.html"><span class="fa fa-blog btn-icon"></span>Blog</a>
+	    		<a href="cv.html"><span class="fa fa-book btn-icon"></span>CV</a>
+	    	</nav>
+	    	<div>
+	    		<!--<h3>Suggestions / Complaints</h3>-->
+	    		<form method="POST">
+	    			<fieldset class="compSugg">
+	    			    <legend>Suggestions / Complaints</legend>
+	    			    <label for="fName">First Name:</label>
+	    			    <input type="text" name="fName" id="fName" placeholder="First Name"/>
+	    			    <label for="lName">Last Name:</label>
+	    			    <input type="text" name="lName" id="lName" placeholder="Last Name"/>
+	    			    <label for="email">Email:</label>
+	    			    <input type="email" name="email" id="email" placeholder="you@email.com"/>
+	    			    <div>
+	    			        <div>
+	    			        	<label for="suggestions">Suggestions:</label>
+	    			        </div>
+	    			        <div>
+	    			        	<input type="radio" name="suggCompType" value="suggestions" onclick="setSuggComp()" id="suggestions"/>
+	    			        </div>
+	    			    </div>
+	    			    <div>
+	    			        <div>
+	    			        	<label for="complaints">Complaints:</label>
+	    			        </div>
+	    			        <div>
+	    			        	<input type="radio" name="suggCompType" value="complaints" onclick="setSuggComp()" id="complaints"/>
+	    			        </div>
+	    			    </div>
+	    			    <textarea id="suggContent" name="suggContent" rows="10" placeholder="Enter your suggestions here"></textarea>
+	    			    <button type="submit" name="submit">Submit</button>
+	    			</fieldset>
+	    		</form>
+	    	</div>
+	    	<nav class="contact">
+	    		<h3>Contact Us</h3>
+	            <p><span class="fa fa-map-pin btn-icon"></span>University of Nigeria Nsukka, Enugu</p>
+	            <p><span class="fa fa-phone btn-icon"></span>+234 9063329260</p>
+	            <p><span class="fa fa-envelope btn-icon"></span>Fxdon.ace@gmail.com</p>
+	            <a href="https://wa.me/qr/TMAA5B2P2KSTH1"><span class="fa fa-whatsapp btn-icon"></span>Whatsapp</a>
+	            <a href="https://www.facebook.com/share/1CZxXyiDmL/?mibextid=qi2Omg"><span class="fa fa-facebook btn-icon"></span>Facebook</a>
+	            <a href="https://www.instagram.com/00fxdon?igsh=Y3VlZTg5ZXJxNzdw"><span class="fa fa-instagram btn-icon"></span>Instagram</a>
+	    	</nav>
+	    	<div><hr/>&copy Copyright FxDon 2025</div>
+	    </footer>
+	</body>
+	<script type="text/javascript" src="js/test.js"></script>
+</html>
